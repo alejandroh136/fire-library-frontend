@@ -1,0 +1,22 @@
+<div class="top">
+    <h2 class="logo">Fire Library</h2>
+<ul  class="navtop" style="margin: 0; padding:0;">
+<li><a routerLink="/home">home</a></li>
+<li><a routerLink="/home">books</a></li>
+<li><a routerLink="/searchBooks">search</a></li>
+<li><a routerLink="/myBooks">myBooks</a></li> <!-- customerId must be passed in after login -->
+<span *ngIf="!loggedIn">
+    <li><a routerLink="/login">login</a></li>
+    <li><a routerLink="/signup">signup</a></li>
+</span>
+<span *ngIf="loggedIn"> 
+    <li>
+    <a href="" click="onLogout()">logout</a>
+    </li> 
+    <li>
+    <a routerLink="/cart">cart</a>
+    </li>
+</span>
+</ul>
+
+</div>

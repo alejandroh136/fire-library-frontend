@@ -1,0 +1,17 @@
+<p>Sign up</p>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="login">
+      <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+        
+          <input name="email" ngModel type="text" placeholder="Username" #usernameInput="ngModel" required>
+        
+          <input type="password" name="password" ngModel placeholder="Password" #passwordInput="ngModel"
+            required>
+        
+        <button>Signup</button>
+      </form>
+    </div>
+  </div>
+</div>

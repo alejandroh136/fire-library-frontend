@@ -1,0 +1,15 @@
+
+.container {
+    height: 100%;
+    float: center;
+    display:flex
+    
+}
+
+p {
+    color: white;
+    text-align: left;
+    font: bold;
+    padding-left: 150px;
+}
+

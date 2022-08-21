@@ -1,0 +1,67 @@
+<div class="container">
+<p>Please enter your search parameters</p>
+<div class="stuff">
+<form [formGroup]="searchForm">
+    <div>
+      <label for="searchBy">
+        Search by:
+      </label>
+      <select id="searchBy" name="searchBy"  formControlName="searchBy">
+        <option value="isbn" selected>ISBN</option>
+        <option value="genre">Genre</option>
+        <option value="author">Author</option>
+        <option value="title">Title</option>
+      </select>
+    </div>
+    <div>
+      <label for="searchFor">
+        Search for: 
+      </label>
+      <input id="searchFor" type="text" formControlName="searchFor">
+    </div>
+    <button class="button" (click)="onSubmit()">Search</button>
+</form>
+<br/>
+<div class="container2">
+  <div *ngFor="let item of books" class="books" style="margin-bottom: 50px;">
+    <div class="book">
+    <img src="https://covers.openlibrary.org/b/isbn/{{item.isbn}}-M.jpg" />
+      <ul class="book">
+      <li>isbn: {{item.isbn}}</li>
+      <li>Title: {{item.title}}</li>
+      <li>Publisher: {{item.publisher}}</li>
+      <li>Language: {{item.language}}</li>
+      <li>Pages: {{item.pages}}</li>
+      <li>Author Name: {{item.authorName}}</li>
+      <li>Synopsys: {{item.synopsys}}</li>
+      <li>Excerpt: {{item.excerpt}}</li>
+      <li>AvalableCopies: {{item.avalableCopies}}</li>
+      </ul>
+      <div *ngIf="loggedIn"><button (click)="addBook(item)">add</button></div>
+    </div>  
+  </div>
+</div>
+</div>
+</div>
+
+<!-- This for really goes to /searchBooksResult page on click -->
+<!-- <form #form action='http://localhost:4200/searchBooksResult' method="GET">
+  <div>
+    <label for="searchBy">
+      searchBy
+    </label>
+    <select name="searchBy">
+      <option value="isbn">ISBN</option>
+      <option value="genre">Genre</option>
+      <option value="author">Author</option>
+      <option value="title">Title</option>
+    </select>
+  </div>
+  <div>
+    <label for="searchFor">
+      searchFor
+    </label>
+    <input name="searchFor" type="text">
+  </div>
+  <button type="submit" class="button" (click)="form.submit()">Search</button>
+</form> -->

@@ -1,0 +1,22 @@
+
+<div class = container2>
+    <div *ngFor="let item of books" class="books">
+        
+        <div class="book">
+        <img src="https://covers.openlibrary.org/b/isbn/{{item.isbn}}-M.jpg" />
+        <ul>
+        <li>isbn: {{item.isbn}}</li>
+        <li>Title: {{item.title}}</li>
+        <li>Publisher: {{item.publisher}}</li>
+        <li>Language: {{item.language}}</li>
+        <li>Pages: {{item.pages}}</li>
+        <li>Author Name: {{item.authorName}}</li>
+        <!-- <li>Synopsys: {{item.synopsys}}</li>
+        <li>Excerpt: {{item.excerpt}}</li> -->
+        <li>AvalableCopies: {{item.avalableCopies}}</li>
+        </ul>
+        <div *ngIf="loggedIn"><button (click)="addBook(item)">add</button></div>
+        </div>
+    </div>
+    <!--<p>will display books</p>-->
+</div>

@@ -1,0 +1,35 @@
+div{
+    background-color: #000000;
+}
+
+.logo {
+    color: white;
+    background-color: #000000;
+}
+
+ul.navtop {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    padding: 10px;
+}
+
+span{
+    display: flex;
+}
+
+a{
+    font-size: small;
+    text-decoration: none;
+    color: white;
+}
+
+div.top{
+    height: 100%;
+}
+
+h2{
+    text-align: center;
+}
